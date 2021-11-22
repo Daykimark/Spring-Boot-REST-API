@@ -32,12 +32,12 @@ public class Main {
         }
     }
 
-    public String getAllUsers () {
+    public String getAllUsers() {
         ResponseEntity<String> forEntity = restTemplate.getForEntity(url, String.class);
         return String.join(";", Objects.requireNonNull(forEntity.getHeaders().get("set-cookie")));
     }
 
-    public void createUser () {
+    public void createUser() {
         User user = new User("James","Brown", (byte) 41);
         user.setId(3L);
         HttpEntity<User> entity = new HttpEntity<>(user, headers);
@@ -46,7 +46,7 @@ public class Main {
         new ResponseEntity<>(request, HttpStatus.OK);
     }
 
-    public void updateUser () {
+    public void updateUser() {
         User user = new User("Thomas","Shelby", (byte) 27);
         user.setId(3L);
         HttpEntity<User> entity = new HttpEntity<>(user,headers);
