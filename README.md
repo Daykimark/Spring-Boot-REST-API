@@ -1,4 +1,4 @@
-# JM preproject 3.1.4 Spring (REST-template)
+# Spring (REST-template)
 
 В рамках этой задачи мы освоим работу с Rest-template, взаимодействуя с помощью него с открытым REST API.
 
